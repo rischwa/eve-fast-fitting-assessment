@@ -71,7 +71,6 @@ namespace EVE_Fast_Fitting_Assessment
             splash.Show();
             base.OnStartup(ev);
             var main = new MainWindow();
-            MainWindow = main;
 
             var start = DateTime.UtcNow;
             try

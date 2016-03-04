@@ -93,13 +93,13 @@ namespace EVE_Fast_Fitting_Assessment.Ui
                                   if (t.IsFaulted)
                                   {
                                       Log.Logger.Warning(t.Exception, "Error setting navigation target");
-                                      MessageBox.Show(Application.Current.MainWindow,
+                                      MessageBox.Show(
                                                       $"Could not set navigation target: {t.Exception?.InnerExceptions?.FirstOrDefault() ?.Message ?? "unknown reason"}",
                                                       "Error");
                                   }
                                   else
                                   {
-                                      MessageBox.Show(Application.Current.MainWindow, $"Successfully set navigation target to {t.Result.Name}");
+                                      MessageBox.Show( $"Successfully set navigation target to {t.Result.Name}");
                                   }
                               });
         }

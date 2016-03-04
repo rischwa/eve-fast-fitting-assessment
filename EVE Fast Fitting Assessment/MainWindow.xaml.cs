@@ -142,7 +142,7 @@ namespace EVE_Fast_Fitting_Assessment
             catch (Exception e)
             {
                 Log.Logger.Warning(e, "Error in loading killmail");
-                MessageBox.Show(this,$"Sorry, that didn't work!\nReason: {e.Message}", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Sorry, that didn't work!\nReason: {e.Message}", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
             {
@@ -315,7 +315,7 @@ namespace EVE_Fast_Fitting_Assessment
 
         private void NoShipTypeAvailable()
         {
-            MessageBox.Show(this,
+            MessageBox.Show(
                             "This killmail contains no target ship info, please try another one.",
                             "WARNING",
                             MessageBoxButton.OK,
