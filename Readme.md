@@ -19,12 +19,13 @@ Imagine you are solo hunting in faction warfare with a scram kiter and see a Mer
 You go check his killboard and find his last losses of Merlins. Now you'd like to know if you are able to scram kite him, if he uses the same fit, or if he is either too fast or his weapons have too good range/tracking for you.
 So you copy the crest killmail link into your clipboard and paste it into EVE Fast Fitting Assessment. You can immediately see he could hit out to 6km with Null ammo loaded into his Light Neutron Blaster IIs while being able to run 1179m/s with his overheated afterburner.
 
-He is not fast enough  for your, so you preheat your AB, set your orbit distance to 7km and enter the plex...\
+He is not fast enough  for your, so you preheat your AB, set your orbit distance to 7km and enter the plex...
 The Griffin decloaking right as you enter is not part of this story ;).
 
 ### Functional description
 
-When you startup EVE Fast Fitting Assessment you will be greated by this splashscreen:
+Here is a more in depth look into the capabilities of EVE Fast Fitting Assessment.
+When you startup FFA you will be greated by this splashscreen:
 
 ![FFA Splashscreen](http://eve-plh.com/FFA/splashscreen.gif "FFA Splashcreen")
 
@@ -37,7 +38,7 @@ Once the application runs, you get a very tidy interface providing you with a te
 
 The fitting analysis on the bottom shows you multiple useful information:
 * The EHP for omni damage and for the single damage types, to immediately see resist holes
-* The (overheated) active tank (comining hull/armor and shield reps and also passive shield recharge)
+* The (overheated) active tank (combining hull/armor and shield reps and also passive shield recharge)
 * The maximal alpha damage and DPS of the fit
 * The (overheated) weapon stats with the most commonly used ammo types and Gallente drones
 * The base speed, speed with propulsion module and with overheated propulsion module
@@ -54,7 +55,7 @@ If you do that, you can save any fit in FFA to your character, if you want to an
 
 Once you click onte the login button, your browser will open the Single Sign On (SSO) page of CCP (this is in your browser and FFA can't see anything of it, your credentials remain completely secure. When you login in, you are asked to grant FFA the rights to read/write your fits and also read your location and write your autopilot target.
 
-Here you can see how CCPs authorization page will look like:\
+Here you can see how CCPs authorization page will look like:
 ![CCP Auhtorization Page](http://eve-plh.com/FFA/authorize.png "Authorize FFA in CCPs SSO system")
 
 And this is how FFA looks, after you log in:
@@ -62,7 +63,7 @@ And this is how FFA looks, after you log in:
 ![Login with EVE Online](http://eve-plh.com/FFA/login.gif "Login with EVE Online")
 
 On the right side you'll see your character portrait and if you are logged in your current location (updated every 10s).
-Also two new buttons appear on the right, one to save the current fit (only shown, if you currently have a fit) and a logout button on the bottom. You also see white location markers in the prices tab. Through pressing them you can instantly set your autopilot destination to the respective trade up, if you want to try a fit immediately and need to buy it.
+Also two new buttons appear on the right, one to save the current fit (only shown, if you currently have a fit) and a logout button on the bottom. You also see white location markers in the prices box. Through pressing them you can instantly set your autopilot destination to the respective trade hup, if you want to try a fit immediately and need to buy it.
 
 FFA will keep the rights you granted even after restarts, so you only have to login once, until you either
 * press the logout button
@@ -106,4 +107,5 @@ If you register it, you have to set the callback URL to http://localhost:49871/c
 * characterFittingsWrite
 * characterLocationRead
 * characterNavigationWrite
+
 Once you have done that, you'll get a client id and client secret, which you must set in `EVE Fast Fitting Assessment\App.xaml.cs` on the top.
