@@ -48,7 +48,7 @@ var publishedSkillCount = crest.Inventory.GetCategories()
 You can also access authenticated CREST methods, once your user authenticates itself.
 You only have to register your application online first under https://developers.eveonline.com/applications
 The registration process creates a client id and secret for you
-```
+```cs
 ICrest crest = new Crest();
 var authedCrest =  await
                     crest.Authenticate(
@@ -69,7 +69,7 @@ var authedCrest = await crest.Authenticate(CLIENT_ID, CLIENT_SECRET, refreshToke
 ```
 
 ### Known limitations
-As said, CrestSharp still isn't fully ready for prime time, because it was created as a tool in the CREST API challenge.
+As said, CrestSharp still isn't fully ready for prime time yet, because it was created as a tool in the CREST API challenge first.
 There are a some endpoints not yet supported and also the implementation isn't what I would like it to be in some cases.
 It's also blatantly missing API documentation and larger test coverage.
 

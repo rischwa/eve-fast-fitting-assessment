@@ -21,5 +21,7 @@ namespace CrestSharp
         IMarket Market { get; }
 
         Task<IAuthenticatedCrest> Authenticate(string clientId, string clientSecret, Uri localUrl, AuthenticatedCrestScope scope);
+
+        Task<IAuthenticatedCrest> Authenticate(string clientId, string clientSecret, string refreshToken);
     }
 }
