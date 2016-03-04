@@ -13,6 +13,11 @@ The API of CrestSharp was designed with the following intentations
 Using CrestSharp is really simple. You just reference the dll in your project (NuGet package will be created, once it is finished) and create a Crest object like
 
 ```cs
+//setup serilog logging (optional)
+Log.Logger = new LoggerConfiguration().WriteTo.RollingFile("logs\\application-{Date}.log")
+                .MinimumLevel.Information()
+                .CreateLogger();
+
 //set the user agent to your application (warning: this will move to Crest.Settings after the freeze), e.g. 
 Crest.UserAgent = $"EVE Fast Fitting Assessment (v{Assembly.GetExecutingAssembly() .GetName() .Version})";
 

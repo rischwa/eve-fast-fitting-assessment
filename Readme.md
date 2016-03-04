@@ -3,6 +3,8 @@ EVE Fast Fitting Assessment (FFA) is a Windows desktop appliction to quickly ass
 It was created as my entry to the CREST API challenge of CCP in February 2016 on which I spent way too much time ;).
 EVE Fast Fitting Assessment was designed to be useful for EVE players and at the same time also provide insight into a multitude of CREST endpoints for (future) EVE 3rd party developers.
 
+To run FFA, you can download a click once [installer](http://eve-plh.com/FFA/setup/setup.exe), or if that doesn't work (in my experience ClickOnce installers tend to have problems for a small number of users), you can just download the a [zip file containing the application](http://eve-plh.com/FFA/eveffa.zip) and start the .exe from there.
+
 This readme is divided into two sections.
 
 * A user manual, describing what the application does and how to use it
