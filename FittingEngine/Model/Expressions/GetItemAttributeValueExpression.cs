@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Serilog;
 
 namespace FittingEngine.Model.Expressions
 {
@@ -17,6 +18,12 @@ namespace FittingEngine.Model.Expressions
             Arg2.Execute(context, stack);
             var attributeId = Convert.ToInt32(stack.Pop());
 
+            if (!item.ContainsAttributeId(attributeId))
+            {
+                Log.Logger.Warning($"missing attributeid: {attributeId}, item: {item.TypeName} / {item.TypeId}");
+                stack.Push(0.0);
+                return;
+            }
             var attribute = item.GetAttributeById(attributeId);
             stack.Push(attribute.Value);
         }
