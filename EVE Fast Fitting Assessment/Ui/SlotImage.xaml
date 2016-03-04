@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="EVE_Fast_Fitting_Assessment.Ui.SlotImage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="32" d:DesignWidth="32"
+             xmlns:cachedImage="clr-namespace:CachedImage;assembly=CachedImage"
+             xmlns:local="clr-namespace:EVE_Fast_Fitting_Assessment.Models">
+    <cachedImage:Image  Stretch="UniformToFill" Width="32" Height="32" ToolTip="{Binding Tooltip}" ImageUrl="{Binding Icon}" Visibility="{Binding Visibility}"  />
+</UserControl>

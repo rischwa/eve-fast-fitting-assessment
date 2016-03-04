@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="EVE_Fast_Fitting_Assessment.Ui.Prices"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:EVE_Fast_Fitting_Assessment.Ui"
+             xmlns:spinner="clr-namespace:EVE_Fast_Fitting_Assessment.Ui.Spinner"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:PriceToVisibilityConverter x:Key="PriceToVisibilityConverter"></local:PriceToVisibilityConverter>
+        <SolidColorBrush x:Key="SpinnerForegroundBrush" Color="LightGray"></SolidColorBrush>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions><RowDefinition Height="Auto"></RowDefinition></Grid.RowDefinitions>
+        <GroupBox Header="Prices">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition MinWidth="100" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="Jita:" Grid.Row="0" Grid.Column="0" Margin="0 6"/>
+                <TextBlock Text="{Binding JitaPrice}" Grid.Row="0" Grid.Column="1" Margin="4 6 12 0" />
+                <Image Width="14" ToolTip="Set your autopilot target to Jita" Source="../Resources/dot_circle.png"
+                       Grid.Row="0" Grid.Column="2"
+                       Visibility="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType=local:Prices}, Path=NavigationVisibility}"
+                       MouseLeftButtonUp="Jita_OnMouseLeftButtonUp" ToolTipService.Placement="Relative"
+                           ToolTipService.VerticalOffset="-38"  ToolTipService.HorizontalOffset="7"/>
+                <spinner:UcSpinnerCogs Grid.Row="0" Grid.Column="1" Foreground="{StaticResource SpinnerForegroundBrush}" Visibility="{Binding JitaPrice, Converter={StaticResource PriceToVisibilityConverter}}" /> 
+                
+
+                <TextBlock Text="Amarr:" Grid.Row="1" Grid.Column="0" Margin="0 6" />
+                <TextBlock Text="{Binding AmarrPrice}" Grid.Row="1" Grid.Column="1" Margin="4 6 12 0" />
+                <Image Width="14" ToolTip="Set your autopilot target to Amarr" Source="../Resources/dot_circle.png"
+                       Grid.Row="1" Grid.Column="2"
+                       Visibility="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType=local:Prices}, Path=NavigationVisibility}"
+                       MouseLeftButtonUp="Amarr_OnMouseLeftButtonUp" ToolTipService.Placement="Relative"
+                           ToolTipService.VerticalOffset="-38"  ToolTipService.HorizontalOffset="7"/>
+                <spinner:UcSpinnerCogs Grid.Row="1" Grid.Column="1" Foreground="{StaticResource SpinnerForegroundBrush}" Visibility="{Binding AmarrPrice, Converter={StaticResource PriceToVisibilityConverter}}" />
+
+                <TextBlock Text="Dodixie:" Grid.Row="2" Grid.Column="0" Margin="0 6" />
+                <TextBlock Text="{Binding DodixiePrice}" Grid.Row="2" Grid.Column="1" Margin="4 6 12 0" />
+                <Image Width="14" ToolTip="Set your autopilot target to Dodixie" Source="../Resources/dot_circle.png"
+                       Grid.Row="2" Grid.Column="2"
+                       Visibility="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType=local:Prices}, Path=NavigationVisibility}"
+                       MouseLeftButtonUp="Dodixie_OnMouseLeftButtonUp" ToolTipService.Placement="Relative"
+                           ToolTipService.VerticalOffset="-38"  ToolTipService.HorizontalOffset="7"/>
+                <spinner:UcSpinnerCogs Grid.Row="2" Grid.Column="1" Foreground="{StaticResource SpinnerForegroundBrush}" Visibility="{Binding DodixiePrice, Converter={StaticResource PriceToVisibilityConverter}}" />
+
+                <TextBlock Text="Hek:" Grid.Row="3" Grid.Column="0" Margin="0 6" />
+                <TextBlock Text="{Binding HekPrice}" Grid.Row="3" Grid.Column="1" Margin="4 6 12 0" />
+                <Image Width="14" ToolTip="Set your autopilot target to Hek" Source="../Resources/dot_circle.png"
+                       Grid.Row="3" Grid.Column="2"
+                       Visibility="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType=local:Prices}, Path=NavigationVisibility}"
+                       MouseLeftButtonUp="Hek_OnMouseLeftButtonUp" ToolTipService.Placement="Relative"
+                           ToolTipService.VerticalOffset="-38"  ToolTipService.HorizontalOffset="7"/>
+                <spinner:UcSpinnerCogs Grid.Row="3" Grid.Column="1" Foreground="{StaticResource SpinnerForegroundBrush}" Visibility="{Binding HekPrice, Converter={StaticResource PriceToVisibilityConverter}}" />
+
+                <TextBlock Text="Rens:" Grid.Row="4" Grid.Column="0" Margin="0 6" />
+                <TextBlock Text="{Binding RensPrice}" Grid.Row="4" Grid.Column="1" Margin="4 6 12 0" />
+                <Image Width="14" ToolTip="Set your autopilot target to Rens" Source="../Resources/dot_circle.png"
+                       Grid.Row="4" Grid.Column="2"
+                       Visibility="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType=local:Prices}, Path=NavigationVisibility}"
+                       MouseLeftButtonUp="Rens_OnMouseLeftButtonUp" ToolTipService.Placement="Relative"
+                           ToolTipService.VerticalOffset="-38" ToolTipService.HorizontalOffset="7" />
+                <spinner:UcSpinnerCogs Grid.Row="4" Grid.Column="1" Foreground="{StaticResource SpinnerForegroundBrush}" Visibility="{Binding RensPrice, Converter={StaticResource PriceToVisibilityConverter}}" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

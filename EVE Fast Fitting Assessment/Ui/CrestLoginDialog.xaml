@@ -1,0 +1,31 @@
+﻿<Window x:Class="EVE_Fast_Fitting_Assessment.Ui.CrestLoginDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EVE_Fast_Fitting_Assessment.Ui"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="300" Style="{DynamicResource SkinWindowStyle}" 
+        WindowStyle="None" AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Themes/EveUiWindowStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Window.Resources>
+            <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+                <TextBlock TextWrapping="Wrap">
+                    Please login, to enable all features.
+                    You need to login on CCPs page where you can grant EVE Fast Fitting Assesment the rights it needs.
+                    <LineBreak />
+                    Eve Fast Fitting Assessment never sees your login credentials or can do anything you don't explicitly allow.
+                </TextBlock>
+        <Image Grid.Row="1" Stretch="Uniform" Source="../Resources/EVE_SSO_Login_Buttons_Large_White.png" x:Name="BtnLogin" MouseLeftButtonUp="BtnLogin_OnMouseLeftButtonUp" />
+            </Grid>
+</Window>

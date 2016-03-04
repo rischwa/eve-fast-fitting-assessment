@@ -1,0 +1,41 @@
+﻿<Window x:Class="EVE_Fast_Fitting_Assessment.Ui.SaveFittingDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EVE_Fast_Fitting_Assessment.Ui"
+        mc:Ignorable="d"
+        Title="Save Fitting" Height="150" Width="300" Style="{DynamicResource SkinWindowStyle}"
+        WindowStyle="None" AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip" Icon="../Resources/logo final.gif" >
+    <Window.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="../Themes/EveUiWindowStyle.xaml" />
+        </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="LblName" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="0,8,0,0" />
+        <TextBox HorizontalAlignment="Stretch" x:Name="TxtName" Grid.Row="0" VerticalAlignment="Center" Grid.Column="1" Margin="0,8,8,0"  TabIndex="1" />
+
+        <Label x:Name="LblDescription" Content="Description:" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="0,8,0,0" />
+        <TextBox HorizontalAlignment="Stretch" x:Name="TxtDescription" Grid.Row="1" VerticalAlignment="Center" Grid.Column="1" Margin="0,8,8,0"  TabIndex="1" />
+
+        <DockPanel Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0">
+            <Button x:Name="BtnCancel" Content="_Cancel" DockPanel.Dock="Right" HorizontalAlignment="Right" IsCancel="True" Padding="5,1" Margin="0,0,4,2" TabIndex="3" ></Button>
+            <Button x:Name="BtnOk" Content="_OK" DockPanel.Dock="Right" HorizontalAlignment="Right" IsDefault="True" Click="BtnOk_Click" Margin="0,0,4,2" Padding="5,1" TabIndex="2"/>
+
+        </DockPanel>
+    </Grid>
+</Window>

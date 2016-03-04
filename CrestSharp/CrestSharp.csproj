@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{464C2668-9132-4FF2-A013-511CD5F7B0F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrestSharp</RootNamespace>
+    <AssemblyName>CrestSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PostSharpIgnoredPackages>PostSharp.Patterns.Threading</PostSharpIgnoredPackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.2.0.0-beta-502\lib\net45\Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Console, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.Console.2.0.0-beta-502\lib\net45\Serilog.Sinks.Console.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.File.2.0.0-beta-502\lib\net45\Serilog.Sinks.File.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.RollingFile, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>..\packages\Serilog.Sinks.RollingFile.2.0.0-beta-502\lib\net45\Serilog.Sinks.RollingFile.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.99.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.99.0\lib\net45\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.99.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.99.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.99.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.99.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementation\AuthenticatedCrest.cs" />
+    <Compile Include="Model\AuthenticatedCrestCharacter.cs" />
+    <Compile Include="Model\AuthenticatedCrestScope.cs" />
+    <Compile Include="Model\AuthenticatedCrestState.cs" />
+    <Compile Include="Caches\CrestNoCache.cs" />
+    <Compile Include="Caches\CrestCacheWithSessionCache.cs" />
+    <Compile Include="Caches\CrestSqliteCache.cs" />
+    <Compile Include="Model\CharacterAccess.cs" />
+    <Compile Include="Model\CharacterPortrait.cs" />
+    <Compile Include="Crest.cs" />
+    <Compile Include="Infrastructure\CrestInternalAuthenticationWebserver.cs" />
+    <Compile Include="Model\Implementation\CrestLocation.cs" />
+    <Compile Include="CrestSettings.cs" />
+    <Compile Include="Model\Fitting.cs" />
+    <Compile Include="Model\FittingItem.cs" />
+    <Compile Include="Model\FittingType.cs" />
+    <Compile Include="IAuthenticatedCrest.cs" />
+    <Compile Include="Model\CharacterInfo.cs" />
+    <Compile Include="Model\ICrestLocation.cs" />
+    <Compile Include="Model\IKillmails.cs" />
+    <Compile Include="Model\IMarket.cs" />
+    <Compile Include="Model\IMarketItem.cs" />
+    <Compile Include="Implementation\CrestPartBase.cs" />
+    <Compile Include="Implementation\Dogma.cs" />
+    <Compile Include="Model\IDogma.cs" />
+    <Compile Include="Implementation\IIsInitializable.cs" />
+    <Compile Include="Implementation\Inventory.cs" />
+    <Compile Include="Implementation\Killmails.cs" />
+    <Compile Include="Implementation\Map.cs" />
+    <Compile Include="Infrastructure\CrestAuthorization.cs" />
+    <Compile Include="Infrastructure\CrestWebHelper.cs" />
+    <Compile Include="Infrastructure\DataType.cs" />
+    <Compile Include="Infrastructure\RateLimiter.cs" />
+    <Compile Include="Model\IWars.cs" />
+    <Compile Include="Model\Location.cs" />
+    <Compile Include="Model\Implementation\Market.cs" />
+    <Compile Include="Model\Implementation\MarketItem.cs" />
+    <Compile Include="Model\Page.cs" />
+    <Compile Include="Implementation\PagedEnumerable.cs" />
+    <Compile Include="Implementation\PagedEnumerator.cs" />
+    <Compile Include="Infrastructure\CrestCacheHelper.cs" />
+    <Compile Include="Infrastructure\CrestJsonContractResolver.cs" />
+    <Compile Include="Caches\CrestSimpleFileSystemCache.cs" />
+    <Compile Include="Model\ICrestCategory.cs" />
+    <Compile Include="Model\ICrestGroup.cs" />
+    <Compile Include="Model\Implementation\CrestCategory.cs" />
+    <Compile Include="Model\Implementation\CrestDogmaAttribute.cs" />
+    <Compile Include="Model\Implementation\CrestDogmaEffect.cs" />
+    <Compile Include="Model\Implementation\CrestGroup.cs" />
+    <Compile Include="Model\Implementation\TypeDogma.cs" />
+    <Compile Include="Model\Implementation\TypeDogmaAttribute.cs" />
+    <Compile Include="Model\Implementation\TypeDogmaEffect.cs" />
+    <Compile Include="Model\Implementation\UriResource.cs" />
+    <Compile Include="Model\ITypeDogma.cs" />
+    <Compile Include="Model\ITypeDogmaAttribute.cs" />
+    <Compile Include="Model\ICrestDogmaEffect.cs" />
+    <Compile Include="Model\ICrestDogmaAttribute.cs" />
+    <Compile Include="Model\IInventory.cs" />
+    <Compile Include="Model\IMap.cs" />
+    <Compile Include="Infrastructure\CrestException.cs" />
+    <Compile Include="Caches\ICrestCache.cs" />
+    <Compile Include="Model\IPlayers.cs" />
+    <Compile Include="Model\CrestObjectExtensions.cs" />
+    <Compile Include="Model\ICrestAlliance.cs" />
+    <Compile Include="Model\ICrestCharacter.cs" />
+    <Compile Include="Model\ICrestConstellation.cs" />
+    <Compile Include="Model\ICrestMoon.cs" />
+    <Compile Include="Model\ICrestNameIdIconObject.cs" />
+    <Compile Include="Model\ICrestPlanet.cs" />
+    <Compile Include="Model\ICrestRegion.cs" />
+    <Compile Include="Model\ICrestWar.cs" />
+    <Compile Include="Model\ICrestWarParticipant.cs" />
+    <Compile Include="Model\Implementation\CrestAlliance.cs" />
+    <Compile Include="Model\Implementation\CrestCharacter.cs" />
+    <Compile Include="Model\Implementation\CrestConstellation.cs" />
+    <Compile Include="Model\Implementation\CrestCorporation.cs" />
+    <Compile Include="Model\Implementation\CrestMoon.cs" />
+    <Compile Include="Model\Implementation\CrestNameIdIconObject.cs" />
+    <Compile Include="Model\Implementation\CrestNameIdPositionObject.cs" />
+    <Compile Include="Model\Implementation\CrestPlanet.cs" />
+    <Compile Include="Model\Implementation\CrestRegion.cs" />
+    <Compile Include="Model\Implementation\CrestWar.cs" />
+    <Compile Include="Model\Implementation\CrestWarParticipant.cs" />
+    <Compile Include="Model\Implementation\CrestImplicitIdNameObject.cs" />
+    <Compile Include="Model\Implementation\Victim.cs" />
+    <Compile Include="Model\Implementation\VictimItem.cs" />
+    <Compile Include="Model\ITypeDogmaEffect.cs" />
+    <Compile Include="Model\IUriResource.cs" />
+    <Compile Include="Model\IVector3D.cs" />
+    <Compile Include="Model\Implementation\Attacker.cs" />
+    <Compile Include="Infrastructure\CrestDocumentLoader.cs" />
+    <Compile Include="Infrastructure\CrestJsonConverter.cs" />
+    <Compile Include="Model\Implementation\CrestKillmail.cs" />
+    <Compile Include="Model\Implementation\CrestObject.cs" />
+    <Compile Include="Model\Implementation\CrestSolarSystem.cs" />
+    <Compile Include="Model\Implementation\CrestType.cs" />
+    <Compile Include="Model\Implementation\Vector3D.cs" />
+    <Compile Include="ICrest.cs" />
+    <Compile Include="Model\IAttacker.cs" />
+    <Compile Include="Infrastructure\ICrestDocumentLoader.cs" />
+    <Compile Include="Model\ICrestKillmail.cs" />
+    <Compile Include="Model\ICrestObject.cs" />
+    <Compile Include="Model\ICrestSolarSystem.cs" />
+    <Compile Include="Model\ICrestType.cs" />
+    <Compile Include="Model\ICrestNamedObject.cs" />
+    <Compile Include="Model\ICrestNameIdObject.cs" />
+    <Compile Include="Model\Implementation\CrestNamedObject.cs" />
+    <Compile Include="Model\Implementation\CrestNameIdObject.cs" />
+    <Compile Include="Model\IVictim.cs" />
+    <Compile Include="Model\IVictimItem.cs" />
+    <Compile Include="Implementation\Players.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Caches\CrestSessionCache.cs" />
+    <Compile Include="Implementation\Wars.cs" />
+    <Compile Include="Model\WaypointList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.99.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.99.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.99.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.99.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
