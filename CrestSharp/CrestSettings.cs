@@ -6,7 +6,7 @@ namespace CrestSharp
 {
     public class CrestSettings
     {
-        private ICrestCache _cache = new CrestSessionCache();
+        private ICrestCache _cache = new CrestCacheWithSessionCache(new CrestSqliteCache());
         private ICrestDocumentLoader _documentLoader = new CrestDocumentLoader();
 
         public ICrestCache Cache
@@ -24,7 +24,6 @@ namespace CrestSharp
         }
 
         public string PublicEndpointUri { get; set; } = "https://public-crest.eveonline.com/";
-        //public string AuthorizedEndpointUri { get; set; } = "https://public-crest.eveonline.com/";
         public string SsoUrl { get; set; } = "https://login.eveonline.com/";
         public string AuthenticatedCrestBaseUrl { get; set; } = "https://crest-tq.eveonline.com/";
 
