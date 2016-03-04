@@ -82,9 +82,9 @@ EVE Fast Fitting Assessment was created with the intention of bringing a multitu
 Also to learn more about CREST myself ;).
 
 The application is roughly divided into three parts:
-* A new .NET CREST library (CrestSharp) focused on ease of use for its users. It supports transparent caching and lazy loading, so the user doesn't really "feel" what happens behind the scenes, while also providing the means for finer grained control, if wanted. You can find more info on CrestSharp in its own Readme in this repository.
-* A new .NET fitting engine build on top of CRESTs public type and dogma system. You can find more information on it in its Readme in the FittingEngine folder.
-* The .NET/WPF GUI and orchestration of the parts to provide the FFA application as a whole. You can find more information on it in the Readme in the EVE Fast Fitting Assessment folder.
+* A new .NET CREST library ([CrestSharp](https://github.com/rischwa/eve-fast-fitting-assessment/tree/master/CrestSharp)) focused on ease of use for its users. It supports transparent caching and lazy loading, so the user doesn't really "feel" what happens behind the scenes, while also providing the means for finer grained control, if wanted. You can find more info on CrestSharp in its own Readme in this repository.
+* A new [.NET fitting engine](https://github.com/rischwa/eve-fast-fitting-assessment/tree/master/FittingEngine) build on top of CRESTs public type and dogma system. You can find more information on it in its Readme in the FittingEngine folder.
+* The [.NET/WPF GUI](https://github.com/rischwa/eve-fast-fitting-assessment/tree/master/EVE%20Fast%20Fitting%20Assessment) and orchestration of the parts to provide the FFA application as a whole.
 
 If you have any questions, please feel free to contact me under jonas.jacobi@web.de or Rischwa Amatin in game.
 
