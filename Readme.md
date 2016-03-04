@@ -13,6 +13,7 @@ This readme is divided into three sections.
 To run FFA, you can either
 * Download a click once [installer](http://eve-plh.com/FFA/setup/setup.exe), 
 * or if that doesn't work (in my experience ClickOnce installers tend to have problems for a small number of users), you can just download the a [zip file containing the application](http://eve-plh.com/FFA/eveffa.zip) and start the .exe from there.
+  * This requires .NET 4.5.2, if you don't have it, you can get it at https://www.microsoft.com/en-us/download/details.aspx?id=42642
 
 ## User Manual
 
